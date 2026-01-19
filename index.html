@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transition Services for Post Secondary Life</title>
     <style>
+        .collapsible {
+            background-color: #4a7c2c;
+            color: white;
+            cursor: pointer;
+            padding: 1.5rem 2rem;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible:hover {
+            background-color: #3d6322;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .collapsible.active:after {
+            content: "\2212";
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .collapsible-content-inner {
+            padding: 2rem;
+        }
+
+        section.collapsible-section {
+            padding: 0;
+            margin: 2rem 0;
+        }
+
         .event-banner {
             background: linear-gradient(135deg, #4a7c2c 0%, #5d9638 100%);
             color: white;
@@ -275,8 +324,10 @@
             <p>Our program focuses on three key areas: financial aid through FAFSA, educational and vocational support through the California Department of Rehabilitation, and essential transition skills through our classroom lessons.</p>
         </section>
 
-        <section id="events">
-            <h2>Upcoming Events</h2>
+        <section id="events" class="collapsible-section">
+            <button class="collapsible">Upcoming Events</button>
+            <div class="collapsible-content">
+                <div class="collapsible-content-inner">
             
             <div class="lesson" style="border-left: 4px solid #4a7c2c; background: #f0f8f0;">
                 <h3>🎓 Transition Fair</h3>
@@ -347,10 +398,14 @@
             </div>
             
             <p style="margin-top: 2rem; color: #666;">Check back regularly for updates on additional transition events and workshops throughout the year.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="fafsa">
-            <h2>FAFSA - Free Application for Federal Student Aid</h2>
+        <section id="fafsa" class="collapsible-section">
+            <button class="collapsible">FAFSA - Free Application for Federal Student Aid</button>
+            <div class="collapsible-content">
+                <div class="collapsible-content-inner">
             
             <div class="info-box">
                 <h3>What is FAFSA?</h3>
@@ -410,10 +465,14 @@
 
             <a href="https://studentaid.gov/h/apply-for-aid/fafsa" class="btn" target="_blank">Complete FAFSA Online</a>
             <a href="https://studentaid.gov/" class="btn" target="_blank">Federal Student Aid Website</a>
+                </div>
+            </div>
         </section>
 
-        <section id="dor">
-            <h2>Department of Rehabilitation (DOR) Services</h2>
+        <section id="dor" class="collapsible-section">
+            <button class="collapsible">Department of Rehabilitation (DOR) Services</button>
+            <div class="collapsible-content">
+                <div class="collapsible-content-inner">
             
             <div class="info-box">
                 <h3>What is DOR?</h3>
@@ -468,10 +527,14 @@
 
             <a href="https://www.dor.ca.gov/" class="btn" target="_blank">Visit California DOR Website</a>
             <a href="https://www.dor.ca.gov/Home/FindAnOffice" class="btn" target="_blank">Find Your Local DOR Office</a>
+                </div>
+            </div>
         </section>
 
-        <section id="lessons">
-            <h2>Transition Lessons</h2>
+        <section id="lessons" class="collapsible-section">
+            <button class="collapsible">Transition Lessons</button>
+            <div class="collapsible-content">
+                <div class="collapsible-content-inner">
             <p>Throughout the year, we complete various lessons to help students develop the skills and knowledge needed for successful transition to post-secondary life. Below are our classroom lessons and resources.</p>
 
             <div class="lesson">
@@ -503,6 +566,8 @@
                     <iframe src="https://docs.google.com/presentation/d/1MbBr4O94N7hTpb6GVajKbs7kNen00bp5HNpqq5AyHpY/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </div>
             </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -522,5 +587,41 @@
         <p>&copy; 2026 Granada Hills Charter School - Transition Services</p>
         <p>Supporting students in their journey to post-secondary success</p>
     </footer>
+
+    <script>
+        // Collapsible sections functionality
+        var coll = document.getElementsByClassName("collapsible");
+        
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        // Open section if linked directly from navigation or banner
+        window.addEventListener('DOMContentLoaded', function() {
+            if (window.location.hash) {
+                var targetId = window.location.hash.substring(1);
+                var targetSection = document.getElementById(targetId);
+                if (targetSection && targetSection.classList.contains('collapsible-section')) {
+                    var button = targetSection.querySelector('.collapsible');
+                    var content = targetSection.querySelector('.collapsible-content');
+                    if (button && content) {
+                        button.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        setTimeout(function() {
+                            targetSection.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
