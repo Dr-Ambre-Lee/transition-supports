@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Services for Post Secondary Life</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #3d6322;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav li {
+            margin: 0.5rem 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2d5016;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #4a7c2c;
+            font-size: 2rem;
+        }
+
+        h3 {
+            color: #3d6322;
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+
+        .lesson {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+            border-left: 4px solid #4a7c2c;
+        }
+
+        .lesson h3 {
+            margin-top: 0;
+        }
+
+        .slide-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin: 1rem 0;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .slide-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4a7c2c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #3d6322;
+        }
+
+        .info-box {
+            background-color: #e8f5e9;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border-left: 4px solid #4a7c2c;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            background-color: #2d5016;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background-color: #f0f0f0;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.25rem 0;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Transition Services for Post Secondary Life</h1>
+            <p class="subtitle">Granada Hills Charter School</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#fafsa">FAFSA</a></li>
+            <li><a href="#dor">DOR Services</a></li>
+            <li><a href="#lessons">Transition Lessons</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About This Program</h2>
+            <p>Welcome to the Transition Services resource hub for Granada Hills Charter School students and families. This site provides comprehensive information and resources to help students successfully transition from high school to post-secondary education and adult life.</p>
+            <p>Our program focuses on three key areas: financial aid through FAFSA, educational and vocational support through the California Department of Rehabilitation, and essential transition skills through our classroom lessons.</p>
+        </section>
+
+        <section id="fafsa">
+            <h2>FAFSA - Free Application for Federal Student Aid</h2>
+            
+            <div class="info-box">
+                <h3>What is FAFSA?</h3>
+                <p>The Free Application for Federal Student Aid (FAFSA) is the key to accessing federal financial aid for college, including grants, work-study programs, and federal student loans. Completing the FAFSA is essential for any student planning to attend college, as most colleges and states also use it to determine eligibility for their own financial aid programs.</p>
+            </div>
+
+            <h3>Why Complete the FAFSA?</h3>
+            <ul>
+                <li>Access federal grants (money you don't have to pay back)</li>
+                <li>Qualify for federal student loans with low interest rates</li>
+                <li>Be considered for work-study programs</li>
+                <li>Many colleges and states require it for their own aid programs</li>
+                <li>It's free to complete!</li>
+            </ul>
+
+            <h3>Important Deadlines</h3>
+            <div class="info-box">
+                <p><strong>Federal Deadline:</strong> June 30 of each award year</p>
+                <p><strong>California State Deadline:</strong> March 2 (priority deadline for Cal Grant consideration)</p>
+                <p><strong>Note:</strong> Many colleges have earlier deadlines. Check with your specific schools!</p>
+            </div>
+
+            <h3>Documents You'll Need</h3>
+            <ul>
+                <li>Social Security number (and parents' if dependent student)</li>
+                <li>Federal tax returns (yours and parents' if dependent)</li>
+                <li>W-2 forms and other earnings records</li>
+                <li>Bank statements and investment records</li>
+                <li>Records of untaxed income</li>
+                <li>FSA ID (create one at studentaid.gov)</li>
+            </ul>
+
+            <h3>How to Complete the FAFSA</h3>
+            <p>Watch these helpful tutorial videos to guide you through the process:</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/XWyq88EjRu4" allowfullscreen></iframe>
+            </div>
+            <p style="margin-bottom: 1.5rem;"><em>Official FAFSA Overview from Federal Student Aid</em></p>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/4IKBoLRwEMs" allowfullscreen></iframe>
+            </div>
+            <p style="margin-bottom: 1.5rem;"><em>Step-by-Step FAFSA Tutorial</em></p>
+
+            <h3>Common Mistakes to Avoid</h3>
+            <ul>
+                <li>Missing the deadline - submit as early as possible!</li>
+                <li>Not listing all schools you're considering</li>
+                <li>Using incorrect or outdated tax information</li>
+                <li>Skipping questions - complete every section</li>
+                <li>Not signing and submitting the form</li>
+            </ul>
+
+            <a href="https://studentaid.gov/h/apply-for-aid/fafsa" class="btn" target="_blank">Complete FAFSA Online</a>
+            <a href="https://studentaid.gov/" class="btn" target="_blank">Federal Student Aid Website</a>
+        </section>
+
+        <section id="dor">
+            <h2>Department of Rehabilitation (DOR) Services</h2>
+            
+            <div class="info-box">
+                <h3>What is DOR?</h3>
+                <p>The California Department of Rehabilitation (DOR) helps people with disabilities obtain and retain employment and maximize their ability to live independently. DOR provides educational funding for trade schools, community colleges, and universities to eligible students.</p>
+            </div>
+
+            <h3>Who Qualifies?</h3>
+            <ul>
+                <li>California residents with physical or mental disabilities</li>
+                <li>The disability results in a substantial impediment to employment</li>
+                <li>Vocational rehabilitation services are required to prepare for, enter, or retain employment</li>
+                <li>The individual can benefit from vocational rehabilitation services</li>
+            </ul>
+
+            <h3>Educational Support Covered</h3>
+            <ul>
+                <li><strong>Trade Schools:</strong> Vocational and technical training programs</li>
+                <li><strong>Community Colleges:</strong> Associate degree and certificate programs</li>
+                <li><strong>Universities:</strong> Bachelor's and advanced degree programs</li>
+            </ul>
+
+            <h3>Services DOR Can Provide</h3>
+            <ul>
+                <li>Tuition and fees for approved educational programs</li>
+                <li>Books and supplies</li>
+                <li>Transportation assistance</li>
+                <li>Assistive technology and accommodations</li>
+                <li>Career counseling and guidance</li>
+                <li>Job placement assistance</li>
+            </ul>
+
+            <h3>Required Forms</h3>
+            <p>To apply for DOR services, you'll need to complete the following forms:</p>
+            
+            <div class="info-box">
+                <p><strong>DR 260:</strong> Application for Vocational Rehabilitation Services</p>
+                <a href="https://www.dor.ca.gov/Home/Forms" class="btn" target="_blank">Download DR 260</a>
+                
+                <p style="margin-top: 1rem;"><strong>DR 222:</strong> Authorization for Release of Information</p>
+                <a href="https://www.dor.ca.gov/Home/Forms" class="btn" target="_blank">Download DR 222</a>
+            </div>
+
+            <h3>How to Apply</h3>
+            <ol>
+                <li>Complete the DR 260 application form</li>
+                <li>Complete the DR 222 release of information form</li>
+                <li>Gather documentation of your disability (medical records, IEP, etc.)</li>
+                <li>Submit forms to your local DOR office</li>
+                <li>Attend an intake appointment with a DOR counselor</li>
+                <li>Work with your counselor to develop an Individualized Plan for Employment (IPE)</li>
+            </ol>
+
+            <a href="https://www.dor.ca.gov/" class="btn" target="_blank">Visit California DOR Website</a>
+            <a href="https://www.dor.ca.gov/Home/FindAnOffice" class="btn" target="_blank">Find Your Local DOR Office</a>
+        </section>
+
+        <section id="lessons">
+            <h2>Transition Lessons</h2>
+            <p>Throughout the year, we complete various lessons to help students develop the skills and knowledge needed for successful transition to post-secondary life. Below are our classroom lessons and resources.</p>
+
+            <div class="lesson">
+                <h3>Yearly Audit - Self-Reflection Activity</h3>
+                <p>This Yearly Audit lesson guides students through a structured self-reflection process to evaluate their previous year's experiences and growth. Students identify their highlights, challenges, personal learnings, and areas of friction before setting intentional goals. The activity concludes with students committing to behaviors they will stop, continue, and start in the year ahead.</p>
+                
+                <div class="slide-container">
+                    <iframe src="https://docs.google.com/presentation/d/1exhYGMXhaM-a25qCAieZIkOcfnbCodqgxtFDSLxH9nc/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+                
+                <a href="data:application/pdf;base64,placeholder" class="btn" download="Yearly_Audit_Worksheet.pdf">Download Student Worksheet (PDF)</a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;"><em>Note: After downloading the site, you'll need to replace this link with your actual PDF file.</em></p>
+            </div>
+
+            <div class="lesson">
+                <h3>Career Assessments</h3>
+                <p>This comprehensive lesson introduces students to various career assessment tools that help them identify their interests, skills, and potential career paths. Students explore different types of assessments including interest inventories, personality tests, and skills evaluations. Through hands-on activities, students learn how to interpret assessment results and use them to make informed decisions about their future education and career goals.</p>
+                
+                <div class="slide-container">
+                    <iframe src="https://docs.google.com/presentation/d/1Ba2cEjWvzmf5CiaSHO6V2m4DX4lN_Cmrhe9l7CCKt-M/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+            </div>
+
+            <div class="lesson">
+                <h3>Introduction to DOR Adult Services</h3>
+                <p>This lesson provides students with an overview of the California Department of Rehabilitation's adult services and how these services can support their transition to post-secondary education and employment. Students learn about eligibility requirements, the types of support available, and the application process for DOR services. The lesson includes real-world examples of how DOR has helped other students achieve their educational and career goals.</p>
+                
+                <div class="slide-container">
+                    <iframe src="https://docs.google.com/presentation/d/1MbBr4O94N7hTpb6GVajKbs7kNen00bp5HNpqq5AyHpY/embed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p><strong>Dr. Ambre Lee</strong></p>
+                <p>Transition Coordinator</p>
+                <p>Granada Hills Charter School</p>
+                <p><strong>Email:</strong> <a href="mailto:alee@ghctk12.com">alee@ghctk12.com</a></p>
+                <p><strong>Phone:</strong> 818-360-2361 ext. 428</p>
+            </div>
+            <p>If you have questions about transition services, FAFSA, DOR services, or any of our lessons, please don't hesitate to reach out. We're here to support you and your family through this important transition!</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Granada Hills Charter School - Transition Services</p>
+        <p>Supporting students in their journey to post-secondary success</p>
+    </footer>
+</body>
+</html>
