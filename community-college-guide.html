@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Resource Guide - Community College & Trade School</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #4472C4 0%, #5b9bd5 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        header .target {
+            font-size: 1.1em;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            color: #4472C4;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4472C4;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #4472C4;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #0563C1;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #0041A8;
+        }
+
+        .intro {
+            background-color: #E7F3FF;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #4472C4;
+        }
+
+        .timeline-section {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .timeline-section h3 {
+            color: #4472C4;
+            margin-top: 15px;
+        }
+
+        .timeline-section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 8px;
+            color: #4472C4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table th {
+            background-color: #4472C4;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #E7F3FF;
+        }
+
+        .college-name {
+            font-weight: 600;
+            color: #4472C4;
+        }
+
+        .agency-section {
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #4472C4;
+        }
+
+        .agency-section h3 {
+            margin-top: 0;
+        }
+
+        .agency-section strong {
+            color: #4472C4;
+        }
+
+        .comparison-table {
+            margin: 30px 0;
+        }
+
+        .comparison-table th {
+            width: 50%;
+        }
+
+        .tips-list {
+            background-color: #FFF9E6;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #FFB900;
+        }
+
+        .tips-list li {
+            margin-bottom: 15px;
+        }
+
+        .tips-list strong {
+            color: #C77E00;
+        }
+
+        .resources-section {
+            background-color: #E7F3FF;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .footer-message {
+            background: linear-gradient(135deg, #4472C4 0%, #5b9bd5 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-top: 40px;
+        }
+
+        .highlight-box {
+            background-color: #D5E8F0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #4472C4;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            header {
+                background: #4472C4;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+            table {
+                font-size: 0.9em;
+            }
+            table th, table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Transition Resource Guide</h1>
+            <div class="subtitle">For Seniors</div>
+            <div class="target">Planning to Attend Community College or Trade School</div>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <h2>Introduction</h2>
+                <p>This guide will help you navigate the transition from high school to community college or trade school. It includes information about local resources in Granada Hills and the San Fernando Valley, important steps to take before graduation, and contact information for agencies that can support your success.</p>
+            </div>
+
+            <h2>Timeline: Senior Year Action Steps</h2>
+            
+            <div class="timeline-section">
+                <h3>Fall Semester (September - December)</h3>
+                <ul class="checklist">
+                    <li>Meet with your high school transition coordinator or special education case manager</li>
+                    <li>Research community colleges and trade schools in your area</li>
+                    <li>Schedule campus tours and meet with <a href="#dsps">Disabled Student Programs & Services (DSPS)</a></li>
+                    <li>Gather documentation of your disability (IEP, psychological evaluations, medical records)</li>
+                </ul>
+
+                <h3>Winter/Spring Semester (January - May)</h3>
+                <ul class="checklist">
+                    <li>Register with <a href="https://home.cccapply.org/us/" target="_blank">CCCApply</a> for all community college applications</li>
+                    <li>Submit college applications (deadlines vary, but many accept rolling applications)</li>
+                    <li>Apply to <a href="#dor">Department of Rehabilitation (DOR)</a> for adult services during spring semester</li>
+                    <li>Complete <a href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank">FAFSA</a> (Free Application for Federal Student Aid) with your family (Due March 2nd)</li>
+                    <li>Apply for <a href="https://www.cccapply.org/us/money/california-college-promise-grant" target="_blank">California College Promise Grant (CCPG)</a> for fee waivers</li>
+                    <li>Register with college DSPS office and request accommodations</li>
+                    <li>Take college placement tests (if required)</li>
+                    <li>Attend new student orientation</li>
+                </ul>
+
+                <h3>Summer Before College (June - August)</h3>
+                <ul class="checklist">
+                    <li>Finalize your fall class schedule with an academic counselor</li>
+                    <li>Meet with DSPS to confirm accommodations are in place</li>
+                    <li>Purchase textbooks and supplies</li>
+                    <li>Arrange transportation to campus</li>
+                    <li>Attend summer bridge programs if available</li>
+                </ul>
+            </div>
+
+            <h2>Local Community Colleges & Trade Schools</h2>
+
+            <h3>Community Colleges Near Granada Hills</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>College</th>
+                        <th>Location & Contact</th>
+                        <th>DSPS Office</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.lamission.edu/" target="_blank" class="college-name">Los Angeles Mission College</a></td>
+                        <td>
+                            13356 Eldridge Ave<br>
+                            Sylmar, CA 91342<br>
+                            <a href="tel:8183647600">(818) 364-7600</a>
+                        </td>
+                        <td>
+                            <a href="tel:8183647732">(818) 364-7732</a><br>
+                            Building CMS, Room 105
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.lapc.edu/" target="_blank" class="college-name">Los Angeles Pierce College</a></td>
+                        <td>
+                            6201 Winnetka Ave<br>
+                            Woodland Hills, CA 91371<br>
+                            <a href="tel:8187196400">(818) 719-6400</a>
+                        </td>
+                        <td>
+                            <a href="tel:8187102636">(818) 710-2636</a><br>
+                            Center for Academic Success
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.lavc.edu/" target="_blank" class="college-name">Los Angeles Valley College</a></td>
+                        <td>
+                            5800 Fulton Ave<br>
+                            Valley Glen, CA 91401<br>
+                            <a href="tel:8189472600">(818) 947-2600</a>
+                        </td>
+                        <td>
+                            <a href="tel:8189472681">(818) 947-2681</a><br>
+                            Student Services Annex, Rm 110
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Trade Schools & Career Training Programs</h3>
+            <ul>
+                <li><a href="https://www.lattc.edu/" target="_blank">Los Angeles Trade-Technical College (LATTC)</a> - 400 W Washington Blvd, Los Angeles, CA 90015 | <a href="tel:2137637000">(213) 763-7000</a></li>
+                <li><a href="https://www.wvoc.net/" target="_blank">San Fernando Valley Regional Occupational Program (WVOC)</a> - Various locations | <a href="tel:8189015329">(818) 901-5329</a></li>
+                <li><a href="https://www.nvoc.org/" target="_blank">North Valley Occupational Center (NVOC)</a> - 5651 Vineland Ave, North Hollywood, CA 91601 | <a href="tel:8189859063">(818) 985-9063</a></li>
+                <li><a href="https://www.lacc.edu/academics/pathways" target="_blank">Los Angeles City College Career Technical Education (LACC)</a> - 855 N Vermont Ave, Los Angeles, CA 90029 | <a href="tel:3239534000">(323) 953-4000</a></li>
+            </ul>
+
+            <h2>Key Support Agencies</h2>
+
+            <div class="agency-section" id="dor">
+                <h3>Department of Rehabilitation (DOR) - Apply in Spring Semester</h3>
+                <p><strong>What they do:</strong> DOR provides job training, career counseling, assistive technology, and job placement services for people with disabilities. Students should apply during spring semester of senior year for adult services to begin after graduation.</p>
+                <p><strong>Contact:</strong> San Fernando Valley Office, 9550 Topanga Canyon Blvd, Chatsworth, CA 91311 | <a href="tel:8187177100">(818) 717-7100</a></p>
+            </div>
+
+            <div class="agency-section">
+                <h3>Regional Center of the San Fernando Valley</h3>
+                <p><strong>What they do:</strong> Regional Centers provide case management, assessments, and connections to services for individuals with developmental disabilities.</p>
+                <p><strong>Contact:</strong> 7208 N Bellaire Ave, North Hollywood, CA 91605 | <a href="tel:8187781900">(818) 778-1900</a></p>
+            </div>
+
+            <div class="agency-section">
+                <h3><a href="https://www.ajcc.lacounty.gov/ajcc/northeast-san-fernando-valley-ajcc" target="_blank">WorkSource Centers (America's Job Center)</a></h3>
+                <p><strong>What they do:</strong> Free job training, career counseling, resume help, and computer access. Open to everyone, including students with mild disabilities.</p>
+                <p><strong>Contact:</strong> Northeast Valley WorkSource Center, 8134 Van Nuys Blvd #200, Panorama City, CA 91402 | <a href="tel:8188905416">(818) 890-5416</a></p>
+            </div>
+
+            <div class="agency-section">
+                <h3>Independent Living Center of Southern California</h3>
+                <p><strong>What they do:</strong> Provides skills training for independent living, self-advocacy, peer support, and community integration resources.</p>
+                <p><strong>Contact:</strong> Van Nuys Office, 14407 Gilmore St, Van Nuys, CA 91401 | <a href="tel:8187856934">(818) 785-6934</a></p>
+            </div>
+
+            <div class="agency-section">
+                <h3>Social Security Administration (SSA)</h3>
+                <p><strong>What they do:</strong> Manages SSI and SSDI benefits. Families should understand how work affects benefits and learn about the Ticket to Work program.</p>
+                <p><strong>Contact:</strong> Van Nuys Social Security Office, 6351 Van Nuys Blvd, Van Nuys, CA 91401 | <a href="tel:18007721213">1-800-772-1213</a></p>
+            </div>
+
+            <h2 id="dsps">Understanding Disabled Student Programs & Services (DSPS)</h2>
+            <p>DSPS is the college office that provides accommodations and support services for students with disabilities. Every California community college has a DSPS office.</p>
+
+            <h3>What Services Does DSPS Provide?</h3>
+            <ul>
+                <li>Extended time on tests and assignments</li>
+                <li>Assistive technology (screen readers, speech-to-text software, calculators)</li>
+                <li>Note-taking services</li>
+                <li>Preferential seating</li>
+                <li>Reduced course load without losing full-time status</li>
+                <li>Academic counseling and educational planning</li>
+                <li>Priority registration</li>
+                <li>Learning disability assessments (if needed)</li>
+            </ul>
+
+            <h3>How to Register with DSPS</h3>
+            <ul>
+                <li>Contact the DSPS office at your chosen college</li>
+                <li>Schedule an intake appointment</li>
+                <li>Bring documentation of your disability (IEP, psychological evaluation, doctor's note)</li>
+                <li>Meet with a DSPS counselor to create your accommodation plan</li>
+                <li>Provide accommodation letters to your professors each semester</li>
+            </ul>
+
+            <h2>Financial Aid & Fee Waivers</h2>
+
+            <div class="highlight-box">
+                <h3>Free Application for Federal Student Aid (FAFSA)</h3>
+                <p>Complete the FAFSA with your family to determine eligibility for federal grants, loans, and work-study. California community college students may qualify for the Pell Grant, which does not need to be repaid. FAFSA opens October 1st each year for the following academic year.</p>
+                <p><strong>Website:</strong> <a href="https://www.studentaid.gov" target="_blank">www.studentaid.gov</a></p>
+            </div>
+
+            <h3>California College Promise Grant (CCPG)</h3>
+            <p>Previously called the BOG Fee Waiver, this grant covers enrollment fees at California community colleges for eligible students. Apply through your college's financial aid office.</p>
+
+            <h3>Other Scholarships</h3>
+            <ul>
+                <li>Check with your high school counselor about local scholarships</li>
+                <li>Ask your college financial aid office about disability-specific scholarships</li>
+                <li>Search online databases like <a href="https://www.fastweb.com" target="_blank">Fastweb.com</a> and <a href="https://www.scholarships.com" target="_blank">Scholarships.com</a></li>
+            </ul>
+
+            <h2>Important Documents to Gather</h2>
+            <p>Having these documents organized will make the transition process much smoother:</p>
+            <ul class="checklist">
+                <li>High school transcripts</li>
+                <li>Current Individualized Education Program (IEP)</li>
+                <li>Psychological or educational evaluations (within last 3 years)</li>
+                <li>Medical documentation of disability (if applicable)</li>
+                <li>Social Security card and birth certificate</li>
+                <li>California ID or driver's license</li>
+                <li>Immunization records</li>
+            </ul>
+
+            <h2>Key Differences Between High School & College</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>High School</th>
+                        <th>College</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>School manages your supports through your IEP</td>
+                        <td>You must self-advocate and request accommodations</td>
+                    </tr>
+                    <tr>
+                        <td>Teachers check in on your progress</td>
+                        <td>Professors expect you to manage your own time and reach out for help</td>
+                    </tr>
+                    <tr>
+                        <td>Classes meet every day</td>
+                        <td>Classes may meet 2-3 times per week with more independent study</td>
+                    </tr>
+                    <tr>
+                        <td>Attendance is often required by law</td>
+                        <td>Attendance policies vary by professor; absences affect your grade</td>
+                    </tr>
+                    <tr>
+                        <td>Free education with provided materials</td>
+                        <td>You pay for tuition, books, and materials (financial aid available)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Tips for Success in College</h2>
+            <div class="tips-list">
+                <ul>
+                    <li><strong>Start small:</strong> Take 2-3 classes your first semester to adjust to the workload</li>
+                    <li><strong>Use your accommodations:</strong> Give accommodation letters to professors on the first day</li>
+                    <li><strong>Build relationships:</strong> Introduce yourself to professors during office hours</li>
+                    <li><strong>Use campus resources:</strong> Tutoring centers, writing centers, and study groups are free</li>
+                    <li><strong>Stay organized:</strong> Use a planner, phone calendar, or app to track assignments and deadlines</li>
+                    <li><strong>Ask for help early:</strong> Don't wait until you're failing to reach out for support</li>
+                    <li><strong>Take care of yourself:</strong> Get enough sleep, eat well, and make time for activities you enjoy</li>
+                </ul>
+            </div>
+
+            <h2>Additional Resources</h2>
+            <div class="resources-section">
+                <ul>
+                    <li>California Community Colleges Chancellor's Office: <a href="https://www.cccco.edu" target="_blank">www.cccco.edu</a></li>
+                    <li>California Department of Rehabilitation: <a href="https://www.dor.ca.gov" target="_blank">www.dor.ca.gov</a></li>
+                    <li>FAFSA Help: <a href="https://www.studentaid.gov" target="_blank">www.studentaid.gov</a></li>
+                    <li>Social Security Work Incentives: <a href="https://www.ssa.gov/work" target="_blank">www.ssa.gov/work</a></li>
+                    <li>Disability Rights California: <a href="https://www.disabilityrightsca.org" target="_blank">www.disabilityrightsca.org</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-message">
+            You've got this! Remember, the transition team at your high school and the support staff at your college are here to help you succeed.
+        </div>
+    </div>
+</body>
+</html>
