@@ -25,6 +25,30 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
+        .home-nav {
+            background-color: #2d5016;
+            padding: 15px 30px;
+        }
+
+        .home-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: inline-flex;
+            align-items: center;
+            transition: opacity 0.3s;
+        }
+
+        .home-nav a:hover {
+            opacity: 0.8;
+        }
+
+        .home-nav a:before {
+            content: "← ";
+            margin-right: 8px;
+            font-size: 1.3em;
+        }
+
         header {
             background: linear-gradient(135deg, #4472C4 0%, #5b9bd5 100%);
             color: white;
@@ -266,6 +290,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="home-nav">
+            <a href="index.html">Back to Home</a>
+        </div>
         <header>
             <h1>Transition Resource Guide</h1>
             <div class="subtitle">For Seniors</div>
