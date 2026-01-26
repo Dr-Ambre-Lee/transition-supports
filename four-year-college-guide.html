@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Resource Guide - Four-Year College & University</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #4472C4 0%, #5b9bd5 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        header .target {
+            font-size: 1.1em;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        h2 {
+            color: #4472C4;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4472C4;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #4472C4;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #0563C1;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #0041A8;
+        }
+
+        .intro {
+            background-color: #E7F3FF;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #4472C4;
+        }
+
+        .timeline-section {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .timeline-section h3 {
+            color: #4472C4;
+            margin-top: 15px;
+        }
+
+        .timeline-section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 8px;
+            color: #4472C4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table th {
+            background-color: #4472C4;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #E7F3FF;
+        }
+
+        .university-name {
+            font-weight: 600;
+            color: #4472C4;
+        }
+
+        .agency-section {
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #4472C4;
+        }
+
+        .agency-section h3 {
+            margin-top: 0;
+        }
+
+        .agency-section strong {
+            color: #4472C4;
+        }
+
+        .comparison-table {
+            margin: 30px 0;
+        }
+
+        .comparison-table th {
+            width: 50%;
+        }
+
+        .tips-list {
+            background-color: #FFF9E6;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #FFB900;
+        }
+
+        .tips-list li {
+            margin-bottom: 15px;
+        }
+
+        .tips-list strong {
+            color: #C77E00;
+        }
+
+        .resources-section {
+            background-color: #E7F3FF;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .footer-message {
+            background: linear-gradient(135deg, #4472C4 0%, #5b9bd5 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-top: 40px;
+        }
+
+        .highlight-box {
+            background-color: #D5E8F0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #4472C4;
+        }
+
+        .info-box {
+            background-color: #FFF3CD;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #FFC107;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            header {
+                background: #4472C4;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+            table {
+                font-size: 0.9em;
+            }
+            table th, table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Transition Resource Guide</h1>
+            <div class="subtitle">For Seniors</div>
+            <div class="target">Planning to Attend a Four-Year College or University</div>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <h2>Introduction</h2>
+                <p>Congratulations on planning to attend a four-year college! This guide will help you navigate the transition from high school to university. It includes information about college disability services, the application process, important steps to take before graduation, and resources to support your success.</p>
+            </div>
+
+            <h2>Timeline: Senior Year Action Steps</h2>
+            
+            <div class="timeline-section">
+                <h3>Fall Semester (September - December)</h3>
+                <ul class="checklist">
+                    <li>Meet with your high school transition coordinator or special education case manager</li>
+                    <li>Meet with your college and career counselor</li>
+                    <li>Research colleges and visit campuses (schedule tours of disability services offices)</li>
+                    <li>Take SAT/ACT if required by your target colleges (request accommodations through College Board/ACT)</li>
+                    <li>Start working on college applications and personal statements</li>
+                    <li>Request letters of recommendation from teachers and counselors</li>
+                    <li>Gather documentation of your disability (IEP, psychological evaluations, medical records)</li>
+                    <li>Submit early action/early decision applications (if applicable, usually November deadlines)</li>
+                </ul>
+
+                <h3>Spring Semester (January - May)</h3>
+                <ul class="checklist">
+                    <li>Submit regular decision college applications (usually January-February deadlines)</li>
+                    <li>Complete <a href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank">FAFSA</a> (Free Application for Federal Student Aid) with your family</li>
+                    <li>Submit <a href="https://cssprofile.collegeboard.org/" target="_blank">CSS Profile</a> if required by your colleges</li>
+                    <li>Apply for scholarships (local, national, and disability-specific)</li>
+                    <li>Apply to <a href="#dor">Department of Rehabilitation (DOR)</a> for adult services during spring semester</li>
+                    <li>Receive college acceptance letters and compare financial aid packages (March-April)</li>
+                    <li>Make your final college decision and submit enrollment deposit (usually by May 1st)</li>
+                    <li>Contact your college's disability services office to start registration process</li>
+                    <li>Submit disability documentation to your college's disability services office</li>
+                    <li>Meet with disability services counselor to establish accommodations</li>
+                    <li>Attend admitted student events and orientation programs</li>
+                </ul>
+
+                <h3>Summer Before College (June - August)</h3>
+                <ul class="checklist">
+                    <li>Complete housing application and request any needed accommodations (accessible room, emotional support animal, etc.)</li>
+                    <li>Register for first semester classes (may include early registration as an accommodation)</li>
+                    <li>Attend new student orientation and meet with academic advisor</li>
+                    <li>Purchase textbooks and supplies</li>
+                    <li>If applicable, arrange for ongoing medical care near campus (therapist, psychiatrist, doctors)</li>
+                </ul>
+            </div>
+
+            <h2>The College Application Process</h2>
+
+            <h3>Should You Disclose Your Disability?</h3>
+            <div class="info-box">
+                <p><strong>Important:</strong> You are NOT required to disclose your disability in your college application. Admissions decisions are made separately from disability services.</p>
+            </div>
+            
+            <p><strong>Consider disclosing if:</strong></p>
+            <ul>
+                <li>Your disability significantly impacted your academic record (lower grades, gaps in coursework)</li>
+                <li>Overcoming challenges related to your disability demonstrates resilience and growth</li>
+                <li>You want to explain your unique perspective or experiences</li>
+            </ul>
+
+            <h3>Application Components</h3>
+            <ul>
+                <li><strong>Common Application or college-specific application</strong></li>
+                <li><strong>Personal statement/essays</strong> - Share your story, goals, and what makes you unique</li>
+                <li><strong>High school transcripts</strong></li>
+                <li><strong>Standardized test scores</strong> (SAT/ACT) - Many schools are now test-optional</li>
+                <li><strong>Letters of recommendation</strong> - From teachers, counselors, or mentors</li>
+                <li><strong>Application fee or fee waiver</strong> - Fee waivers available for students with financial need</li>
+            </ul>
+
+            <h2>California State Universities (CSU) Near Granada Hills</h2>
+            <p>The CSU system offers affordable, high-quality four-year education. Here are campuses within reasonable distance:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>University</th>
+                        <th>Location & Contact</th>
+                        <th>Disability Services</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="university-name">Cal State Northridge (CSUN)</span></td>
+                        <td>
+                            18111 Nordhoff St<br>
+                            Northridge, CA 91330<br>
+                            <a href="tel:8186771200">(818) 677-1200</a>
+                        </td>
+                        <td>
+                            Disability Resources & Educational Services<br>
+                            <a href="tel:8186772684">(818) 677-2684</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="university-name">Cal State LA</span></td>
+                        <td>
+                            5151 State University Dr<br>
+                            Los Angeles, CA 90032<br>
+                            <a href="tel:3233433000">(323) 343-3000</a>
+                        </td>
+                        <td>
+                            Office of Students with Disabilities<br>
+                            <a href="tel:3233433140">(323) 343-3140</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="university-name">Cal State Channel Islands</span></td>
+                        <td>
+                            One University Dr<br>
+                            Camarillo, CA 93012<br>
+                            <a href="tel:8054378400">(805) 437-8400</a>
+                        </td>
+                        <td>
+                            Disability Accommodations & Support Services<br>
+                            <a href="tel:8054373331">(805) 437-3331</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>University of California (UC) System</h2>
+            <p>The UC system offers world-class research universities. Closest campuses to Granada Hills include UCLA (Westwood), UC Irvine, UC Riverside, and UC Santa Barbara. Each UC has a Disabled Students' Program office. Visit <a href="https://www.universityofcalifornia.edu" target="_blank">www.universityofcalifornia.edu</a> for more information.</p>
+
+            <h3>Private Universities in Southern California</h3>
+            <p>Private universities like University of Southern California (USC), Loyola Marymount University, Pepperdine University, and Occidental College offer smaller class sizes and often have robust disability services. Check each school's website for disability services contact information.</p>
+
+            <h2>Understanding College Disability Services</h2>
+
+            <h3>What Services Are Available?</h3>
+            <p>College disability services vary by institution but typically include:</p>
+            <ul>
+                <li>Extended time on exams and assignments</li>
+                <li>Reduced distraction testing environment</li>
+                <li>Note-taking assistance or recording lectures</li>
+                <li>Assistive technology (screen readers, speech-to-text software, FM systems)</li>
+                <li>Priority registration for classes</li>
+                <li>Reduced course load while maintaining full-time status</li>
+                <li>Academic advising and coaching</li>
+                <li>Housing accommodations (single room, accessible room, air conditioning, emotional support animal)</li>
+                <li>Meal plan accommodations (if you have dietary restrictions related to disability)</li>
+            </ul>
+
+            <h3>How to Register for Accommodations</h3>
+            <ul>
+                <li>Contact your college's disability services office as soon as you're admitted</li>
+                <li>Complete their intake process and submit required documentation</li>
+                <li>Documentation typically needs to be from a qualified professional and include diagnosis, functional limitations, and recommended accommodations</li>
+                <li>Meet with a disability services counselor to create your accommodation plan</li>
+                <li>Request accommodation letters each semester and provide them to your professors</li>
+            </ul>
+
+            <h2>Key Support Agencies in Granada Hills/San Fernando Valley</h2>
+
+            <div class="agency-section" id="dor">
+                <h3>Department of Rehabilitation (DOR) - Apply in Spring Semester</h3>
+                <p><strong>What they do:</strong> DOR can help pay for college-related expenses such as tuition, books, assistive technology, and transportation. They also provide career counseling and job placement services. Apply during your spring semester of senior year for services to begin when you start college.</p>
+                <p><strong>Contact:</strong> San Fernando Valley Office, 9550 Topanga Canyon Blvd, Chatsworth, CA 91311 | <a href="tel:8187177100">(818) 717-7100</a></p>
+            </div>
+
+            <div class="agency-section">
+                <h3>Regional Center of the San Fernando Valley</h3>
+                <p><strong>What they do:</strong> Regional Centers serve individuals with developmental disabilities. If you're already a client, continue working with your service coordinator through your transition to college.</p>
+                <p><strong>Contact:</strong> 7208 N Bellaire Ave, North Hollywood, CA 91605 | <a href="tel:8187781900">(818) 778-1900</a></p>
+            </div>
+
+            <div class="agency-section">
+                <h3>Independent Living Center of Southern California</h3>
+                <p><strong>What they do:</strong> Provides independent living skills training, peer support, and advocacy. Can help with transitioning to living on your own or in a dorm.</p>
+                <p><strong>Contact:</strong> Van Nuys Office, 14407 Gilmore St, Van Nuys, CA 91401 | <a href="tel:8187856934">(818) 785-6934</a></p>
+            </div>
+
+            <div class="agency-section">
+                <h3>Social Security Administration (SSA)</h3>
+                <p><strong>What they do:</strong> If you receive SSI or SSDI, understand how attending college and working part-time affects your benefits. The Student Earned Income Exclusion (SEIE) allows college students to exclude earnings from SSI calculations.</p>
+                <p><strong>Contact:</strong> Van Nuys Social Security Office, 6351 Van Nuys Blvd, Van Nuys, CA 91401 | <a href="tel:18007721213">1-800-772-1213</a></p>
+            </div>
+
+            <h2>Financial Aid & Scholarships</h2>
+
+            <div class="highlight-box">
+                <h3>Free Application for Federal Student Aid (FAFSA)</h3>
+                <p>Complete the FAFSA with your family to determine eligibility for federal grants (Pell Grant, FSEOG), loans, and work-study programs. FAFSA typically opens October 1st each year for the following academic year.</p>
+                <p><strong>Website:</strong> <a href="https://www.studentaid.gov" target="_blank">www.studentaid.gov</a></p>
+            </div>
+
+            <h3>CSS Profile</h3>
+            <p>Many private colleges and some public universities require the CSS Profile in addition to FAFSA for institutional aid. Check each college's financial aid website for requirements.</p>
+            <p><strong>Website:</strong> <a href="https://cssprofile.collegeboard.org/" target="_blank">www.cssprofile.collegeboard.org</a></p>
+
+            <h3>California State University Grant Programs</h3>
+            <ul>
+                <li><strong>Cal Grant:</strong> State grant for California residents attending California colleges</li>
+                <li><strong>Middle Class Scholarship:</strong> For families earning up to $217,000 attending UC or CSU</li>
+            </ul>
+
+            <h3>Disability-Specific Scholarships</h3>
+            <ul>
+                <li>Google Lime Scholarship (for students with disabilities pursuing computer science)</li>
+                <li>Anne Ford and Allegra Ford Thomas Scholarships (for students with learning disabilities)</li>
+                <li>National Federation of the Blind Scholarships</li>
+                <li>Autism Society of America Scholarships</li>
+                <li>Organization for Autism Research Scholarship</li>
+            </ul>
+
+            <h3>Department of Rehabilitation (DOR) Financial Support</h3>
+            <p>If approved for DOR services, they may help pay for tuition, books, transportation, assistive technology, and other education-related expenses. This is particularly helpful if you don't qualify for enough financial aid.</p>
+
+            <h2>Important Documents to Gather</h2>
+            <p>Having these documents organized will make the transition process much smoother:</p>
+            <ul class="checklist">
+                <li>High school transcripts (official and unofficial copies)</li>
+                <li>SAT/ACT score reports (if applicable)</li>
+                <li>Current Individualized Education Program (IEP)</li>
+                <li>Psychological or educational evaluations (within last 3 years for college disability services)</li>
+                <li>Medical documentation of disability from qualified professional</li>
+                <li>List of current medications and prescriptions</li>
+                <li>Social Security card and birth certificate</li>
+                <li>California ID or driver's license</li>
+                <li>Immunization records (required by most colleges)</li>
+                <li>Health insurance information</li>
+            </ul>
+
+            <h2>Key Differences Between High School & College</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>High School</th>
+                        <th>College</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>School provides services through your IEP</td>
+                        <td>You must request accommodations and provide documentation</td>
+                    </tr>
+                    <tr>
+                        <td>Teachers monitor your progress and reach out</td>
+                        <td>Professors expect you to self-advocate and ask for help</td>
+                    </tr>
+                    <tr>
+                        <td>Parents are involved in your education</td>
+                        <td>You are responsible for your education (FERPA limits parent access)</td>
+                    </tr>
+                    <tr>
+                        <td>Structured daily schedule (same classes every day)</td>
+                        <td>Flexible schedule with classes 2-3 times per week; you manage your time</td>
+                    </tr>
+                    <tr>
+                        <td>Most testing is frequent and covers small amounts of material</td>
+                        <td>Tests are less frequent and cover more material; finals may be 30-40% of grade</td>
+                    </tr>
+                    <tr>
+                        <td>Free education with provided materials</td>
+                        <td>You pay tuition, fees, housing, books, and living expenses</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Living on Campus vs. Commuting</h2>
+
+            <h3>Benefits of Living on Campus</h3>
+            <ul>
+                <li>Closer to classes, library, and campus resources</li>
+                <li>More opportunities to make friends and participate in campus activities</li>
+                <li>Develops independence and life skills</li>
+                <li>Access to resident advisors and dormitory support</li>
+            </ul>
+
+            <h3>Benefits of Commuting from Home</h3>
+            <ul>
+                <li>More affordable (saves on room and board costs)</li>
+                <li>Familiar environment and family support</li>
+                <li>Easier to maintain ongoing medical care and therapy</li>
+                <li>Less overwhelming transition for some students</li>
+            </ul>
+
+            <p><strong>Consider:</strong> Many students with disabilities start by commuting and move to campus housing after a year once they're comfortable with college.</p>
+
+            <h2>Tips for Success in College</h2>
+            <div class="tips-list">
+                <ul>
+                    <li><strong>Register with disability services immediately:</strong> Don't wait until you're struggling. Get accommodations in place from day one.</li>
+                    <li><strong>Communicate with professors:</strong> Visit during office hours, introduce yourself, and provide your accommodation letter early in the semester.</li>
+                    <li><strong>Use campus resources:</strong> Tutoring centers, writing centers, academic coaches, counseling services - they're all free and there to help you succeed.</li>
+                    <li><strong>Build a support network:</strong> Connect with other students with disabilities, join clubs, find a mentor.</li>
+                    <li><strong>Manage your time:</strong> Use planners, apps, or calendars. For every hour in class, plan 2-3 hours of study time.</li>
+                    <li><strong>Start with a manageable course load:</strong> Taking 12-13 units is full-time. Don't overload yourself your first semester.</li>
+                    <li><strong>Practice self-care:</strong> Sleep, nutrition, exercise, and mental health are as important as academics.</li>
+                    <li><strong>Know when to ask for help:</strong> If you're falling behind, reach out immediately - don't wait until finals week.</li>
+                    <li><strong>Be your own advocate:</strong> No one will manage your education for you. Speak up for what you need.</li>
+                </ul>
+            </div>
+
+            <h2>Additional Resources</h2>
+            <div class="resources-section">
+                <h3>College Planning & Applications</h3>
+                <ul>
+                    <li>Common Application: <a href="https://www.commonapp.org" target="_blank">www.commonapp.org</a></li>
+                    <li>CSU Application: <a href="https://www.calstate.edu/apply" target="_blank">www.calstate.edu/apply</a></li>
+                    <li>UC Application: <a href="https://admission.universityofcalifornia.edu" target="_blank">www.admission.universityofcalifornia.edu</a></li>
+                </ul>
+
+                <h3>Financial Aid</h3>
+                <ul>
+                    <li>FAFSA: <a href="https://www.studentaid.gov" target="_blank">www.studentaid.gov</a></li>
+                    <li>CSS Profile: <a href="https://cssprofile.collegeboard.org" target="_blank">www.cssprofile.collegeboard.org</a></li>
+                    <li>California Student Aid Commission: <a href="https://www.csac.ca.gov" target="_blank">www.csac.ca.gov</a></li>
+                    <li>Scholarship databases: <a href="https://www.fastweb.com" target="_blank">www.fastweb.com</a>, <a href="https://www.scholarships.com" target="_blank">www.scholarships.com</a></li>
+                </ul>
+
+                <h3>Disability-Specific Resources</h3>
+                <ul>
+                    <li>AHEAD (Association on Higher Education and Disability): <a href="https://www.ahead.org" target="_blank">www.ahead.org</a></li>
+                    <li>National Center for College Students with Disabilities: <a href="https://www.ncld.org" target="_blank">www.ncld.org</a></li>
+                    <li>DO-IT (Disabilities, Opportunities, Internetworking, and Technology): <a href="https://www.washington.edu/doit" target="_blank">www.washington.edu/doit</a></li>
+                    <li>Understood.org College Resources: <a href="https://www.understood.org/college" target="_blank">www.understood.org/college</a></li>
+                </ul>
+
+                <h3>Transition Services</h3>
+                <ul>
+                    <li>California Department of Rehabilitation: <a href="https://www.dor.ca.gov" target="_blank">www.dor.ca.gov</a></li>
+                    <li>Social Security Work Incentives: <a href="https://www.ssa.gov/work" target="_blank">www.ssa.gov/work</a></li>
+                    <li>Disability Rights California: <a href="https://www.disabilityrightsca.org" target="_blank">www.disabilityrightsca.org</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-message">
+            Congratulations on taking this exciting step! College is a chance to grow, learn, and achieve your goals. Remember, your high school transition team and college disability services are here to support your success.
+        </div>
+    </div>
+</body>
+</html>
