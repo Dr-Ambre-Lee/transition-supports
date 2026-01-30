@@ -1,0 +1,416 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships - Transition Supports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C5F7F;
+            --secondary: #E08E45;
+            --accent: #7BA05B;
+            --dark: #1A1A1A;
+            --light: #F8F6F1;
+            --border: #D4C5B0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a4259 100%);
+            color: white;
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 400;
+            animation: slideDown 0.6s ease-out 0.1s both;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 3px solid var(--border);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+            padding: 0;
+        }
+
+        .nav-content a {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            border-right: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-content a:last-child {
+            border-right: none;
+        }
+
+        .nav-content a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav-content a.active {
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            animation: fadeIn 0.8s ease-out 0.3s both;
+        }
+
+        .intro-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            border-left: 6px solid var(--accent);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .intro-section h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, #c77635 100%);
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(224, 142, 69, 0.25);
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .download-section h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-section p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: white;
+            color: var(--secondary);
+            padding: 1.25rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 1;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            background: var(--light);
+        }
+
+        .download-btn::before {
+            content: '⬇';
+            font-size: 1.5rem;
+        }
+
+        .resources-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .resource-card h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .resource-card p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .resource-card a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .resource-card a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.15;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.05;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-content {
+                flex-wrap: wrap;
+            }
+
+            .nav-content a {
+                flex: 1 1 50%;
+                border-right: 1px solid var(--border);
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-content a:nth-child(2n) {
+                border-right: none;
+            }
+
+            .resources-section {
+                grid-template-columns: 1fr;
+            }
+
+            .download-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Scholarships</h1>
+            <p class="subtitle">Financial Resources for Your Future</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="index.html">Home</a>
+            <a href="scholarships.html" class="active">Scholarships</a>
+            <a href="fafsa.html">FAFSA</a>
+            <a href="dor.html">DOR Services</a>
+            <a href="resources.html">Resources</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="intro-section">
+            <h2>Scholarship Opportunities</h2>
+            <p>
+                Finding and applying for scholarships is an important part of planning for your post-secondary education. 
+                Scholarships can help reduce the cost of college, vocational training, or other educational programs. 
+                We're here to support you through the application process.
+            </p>
+        </section>
+
+        <section class="download-section">
+            <h2>Scholarship Application</h2>
+            <p>Download our comprehensive scholarship application to get started on your journey to funding your education.</p>
+            <a href="/downloads/1_8_26_Scholarship_App_revised_CD.docx" download class="download-btn">
+                Download Application
+            </a>
+        </section>
+
+        <section class="resources-section">
+            <div class="resource-card">
+                <h3>How to Apply</h3>
+                <p>
+                    Start by downloading and completing the scholarship application above. Gather all required documents, 
+                    including transcripts, letters of recommendation, and personal statements. Submit your completed 
+                    application by the deadline.
+                </p>
+            </div>
+
+            <div class="resource-card">
+                <h3>Tips for Success</h3>
+                <p>
+                    Start early and give yourself plenty of time to complete applications. Proofread carefully and ask 
+                    someone to review your work. Be honest and authentic in your personal statements. Follow all 
+                    instructions carefully.
+                </p>
+            </div>
+
+            <div class="resource-card">
+                <h3>Additional Resources</h3>
+                <p>
+                    Looking for more scholarship opportunities? Check out 
+                    <a href="https://www.fastweb.com/" target="_blank">Fastweb</a>, 
+                    <a href="https://www.scholarships.com/" target="_blank">Scholarships.com</a>, and 
+                    <a href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank">Federal Student Aid</a> 
+                    for thousands of scholarships.
+                </p>
+            </div>
+
+            <div class="resource-card">
+                <h3>Need Help?</h3>
+                <p>
+                    Questions about the scholarship application? Need assistance completing the forms? 
+                    Contact your Transition Coordinator for support and guidance throughout the application process.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Granada Hills Charter School - Transition Supports | Supporting Your Journey to Success</p>
+    </footer>
+</body>
+</html>
